@@ -1,0 +1,32 @@
+<%@accounts.each do |name, q_info|%>
+    <h1> <%=name%></h1>
+    <p>Total Balance: $ <%=q_info.pretty_tally%> </p>
+     <hr>
+     <table>
+    <tr>
+       <td>Category</td>
+       <td>Total Spent</td>
+       <td>Average Transaction</td>
+       </tr>
+    <%q_info.categories.each do |category, c_info|%>
+       <tr>
+       <td>  <%=category%> </td>
+       <td> <%=c_info.pretty_tally %> </td>
+       <td> <%=c_info.pretty_avg_transaction%> </td>
+       </tr>
+    <%end%>
+   </table>
+
+  <%if name == "Priya" %>
+      <p><a href="/account?name=both">Combination</a></p>
+      <p><a href="/account?name=Sonia">Sonia </a></p>
+      <p><a href="http://localhost:4567/home">Home</a></p>
+  <%elsif name == "Sonia" %>
+      <p><a href="/account?name=both">Combination</a></p>
+      <p><a href="/account?name=Priya">Priya </a></p>
+      <p><a href="http://localhost:4567/home">Home</a></p>
+  
+  <%end %>
+
+
+<%end%>
