@@ -1,13 +1,59 @@
-.account_link {
-	margin: auto;
-	font-family; sans-serif;
-	color: blue;
-}
-
-div {
-	background-color: black;
+html {
+	background-color: #9AD4BB;
 }
 
 body {
-	background-color: black;
+	font-family: verdana;
+	background-color: #2B644C;
+	border-radius: 10px;
+	padding:24px;
+	padding-top:10px;
+}
+
+form {
+	background-color: #7E9188;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+label {
+	font-family: monospace;
+	font-size: 15px;
+}
+
+input {
+	background-color: #9AD4BB;
+	border-width:0px;
+	padding:4px;
+	border-radius: 5px;
+}
+
+
+.top_tab{
+	font-family: serif;
+	font-style: italic;
+	background-color: #7E9188;
+	letter-spacing: 0px;
+	color: #D0FDEA;
+	width: 275px;
+	height: 65px;
+
+}
+
+.top_tab a {
+	text-decoration: none;
+	font-size: 45px;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 8px;
+	display: table;
+
+}
+
+.login form {
+	display: inline-table;
+}
+
+.info {
+	display: none;
 }
