@@ -2,7 +2,6 @@ require "sinatra"
 require "./functions.rb"
 require "CSV"
 require "pry"
-# http:/localhost:4567/ ...
 
 get "/home" do
 	erb :home
@@ -41,6 +40,5 @@ post "/login" do
 end
 
 post "/admin" do
-	## code
 	redirect "/csv_addrow"
 end

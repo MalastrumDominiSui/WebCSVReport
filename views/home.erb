@@ -1,15 +1,31 @@
-<a href="/account?name=Sonia">Sonia </a> 
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="utf-8">
 
-<a href="/account?name=Priya">Priya </a>  
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
 
-<a href="/account?name=both priya and sonia">All Accounts</a>  
+<body>
+	<div class="account_link">
+		<a href="/account?name=Sonia" class="account_link">Sonia</a> 
 
-<form action = "/account" method = "post">
-	<label>Admin Login: </label>
-	<input type="text" name="login">
+		<a href="/account?name=Priya" class="account_link">Priya </a>  
 
-	<label>Password: </label>
-	<input type="text" name="password">
+		<a href="/account?name=both priya and sonia" class="account_link">View All Accounts</a>
+	</div>
 
-	<input type= "submit"=>
-</form> 
+	<form action = "/account" method = "post">
+		<label>Admin Login: </label>
+		<input type="text" name="login">
+
+		<label>Password: </label>
+		<input type="text" name="password">
+
+		<input type= "submit"=>
+	</form> 
+
+</body>
+
+</html>
