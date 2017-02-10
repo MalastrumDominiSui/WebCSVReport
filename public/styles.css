@@ -1,19 +1,26 @@
+
+
 html {
-	background-color: #9AD4BB;
+	background-color: #C2FED4;
+}
+
 }
 
 body {
-	font-family: verdana;
-	background-color: #2B644C;
+	font-family: helvetica, sans-serif;
 	border-radius: 10px;
 	padding:24px;
 	padding-top:10px;
+	height: 750px;
 }
 
+
+
 form {
-	background-color: #7E9188;
+	background-color: #655560;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 6px;
+	color:white;
 }
 
 label {
@@ -22,38 +29,117 @@ label {
 }
 
 input {
-	background-color: #9AD4BB;
+	background-color: white;
 	border-width:0px;
 	padding:4px;
-	border-radius: 5px;
+	border-radius: 2px;
+	margin-top: 12px;
+	margin-bottom:12px;
 }
 
 
 .top_tab{
-	font-family: serif;
-	font-style: italic;
-	background-color: #7E9188;
-	letter-spacing: 0px;
-	color: #D0FDEA;
+	font-family: helvetica;
+	font-style: none;
+	background-color: white;
+	color: black;
 	width: 275px;
 	height: 65px;
+
+	border-style: double;
+	border-width:3px;
+	border-color: black;
+	border-right: none;
+	border-left: none;
+
 
 }
 
 .top_tab a {
 	text-decoration: none;
-	font-size: 45px;
-	margin: 10px;
-	padding: 10px;
+	font-size: 40px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin: 7px;
+	padding: 14px;
+	padding-top: 10px;
+	padding-left: 37px;
+	padding-bottom:10px;
 	border-radius: 8px;
-	display: table;
+	display: flex;
+	align-items:center;
 
+}
+
+.Sonia a{
+	margin-left: 20px;
+}
+
+.Priya a{
+	margin-left: 30px;
+}
+
+.All_Accounts a{
+	margin-left: 40px;
 }
 
 .login form {
 	display: inline-table;
 }
 
-.info {
-	display: none;
+#folder_sonia{	
+	position: absolute;
+	background-color: white;
+	display: table;
+	visibility: visible;
+	left: 300px;
+	top: 70px;
+	height: 700px;
+	width: 62%;
+	z-index: 200;
+
+	padding-top: 20px;
+	padding-left: 40px;
+
+	background-color: white;
+
+	border-radius: 10px;
+	border-style: double;
+	border-left: none;
+	border-top-left-radius: 0px;
+}
+
+.folder{
+	font-family: helvetica;
+	font-style: none;
+	text-shadow: 1px 1px white;
+}
+
+.folder p{
+	font-family: monospace;
+	font-size: 19px;
+	text-shadow: none;
+	display:block;
+
+}
+
+p{
+
+	display: inline;
+}
+
+table, th, td {
+    border: none;
+    border-radius: 0px;
+    border-color: grey;
+    text-shadow: none;
+    padding: 5px;
+    font-family: monospace;
+    font-size: 15px;
+    margin: 0px;
+}
+
+tr:nth-child(odd) {
+	background-color:#DCDCDC;
+
 }

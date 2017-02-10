@@ -1,34 +1,93 @@
-<h1> Account Information</h1>
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="utf-8">
 
-<form action ="/getinfo" method ="post">
 
-	<select name = "Account">
-		<option value = "Sonia">Sonia</option>
-		<option value = "Priya">Priya</option>
-	</select>
+<head>
+	<title>Home</title>
+	<link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
 
-	<p><label>Date</label></p> 
-		<input type="date" name="Date"> 
+<body>
 
-	<p><label>Retailer</label></p>
-		<input type="text" name="Payee">
+<form class="login" action = "/admin" method = "post">
+	<label>Admin Login: </label>
+	<input type="text" name="login">
 
-	<p><label>Category</label></p>
-		<input type="text" name="Category">
-
-	<p><label>Gained</label></p>
-		<input type = "text" name="Outflow">
-
-	<p><label>Spent</label></p>
-		<input type="text" name="Inflow">
+	<label>Password: </label>
+	<input type="text" name="password">
 
 	<input type= "submit"=>
-</form>
+</form> 
 
-<!-- <a href="http://localhost:4567/Sonia+Priya">Combination</a> -->
+<span class="top_tab">
+	<a class="top_tab top_text" href="/account?name=Sonia" class="account_link">Sonia</a>
+</span>
+<span class="top_tab">
+	<a class="top_tab top_text" href="/account?name=Priya" class="account_link">Priya</a>
+</span>
+<span class="top_tab">
+	<a class="top_tab top_text" href="/account?name=both priya and sonia" class="account_link">View All</a>
+</span>
 
-<a href="/account?name=Sonia">Sonia </a> 
+	<div class="folder" id="folder_sonia">
 
-<a href="/account?name=Priya">Priya </a>  
+		<form class="entry" action ="/getinfo" method ="post">
+			<ul>
+				<li>
+					<select name = "Account">
+						<option value = "Sonia">Sonia</option>
+						<option value = "Priya">Priya</option>
+					</select>
+				</li>
+				<li>
+					<label>Date</label>
+						<input type="date" name="Date"> 
+				</li>
+				<li>
+				<label>Retailer</label>
+					<input type="text" name="Payee">
+				</li>
+				<li>
+				<label>Category</label>
+					<input type="text" name="Category">
+				</li>
+				<li>
+				<label>Gained</label>
+					<input type = "text" name="Outflow">
+				</li>
+				<li>
+				<label>Spent</label>
+					<input type="text" name="Inflow">
+				</li>
+				<li>
+				<input type= "submit"=>
+				</li>
+			</ul>
+
+		</form>
+	</div>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

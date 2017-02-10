@@ -7,8 +7,20 @@ get "/home" do
 	erb :home
 end
 
-get "/csv_addrow" do
-	erb :csv_addrow
+get "/home" do
+	@account_name = params
+	build_accounts(@account_name["name"])
+	redirect "/home"
+end
+
+post "/identify" do
+	if params !={}
+		@login = params.values.join(" ")
+		session[:message] = @login
+		redirect "/admin"
+	else
+		redirect "/home"
+	end 
 end
 
 get "/account" do
@@ -32,13 +44,18 @@ post "/getinfo" do
 	redirect "/account" 
 end
 
-post "/login" do
-	erb :csv_admin
-	@adminAccount = params[login]
-	@adminPassword = params[password]
-	params
+post "/admin" do
+	# if session[:message] == "Dad Priya and Sonia"
+		
+	# else 
+	# 	redirect "/home"
+	# end
+	erb :csv_addrow
 end
 
-post "/admin" do
-	redirect "/csv_addrow"
+post "/logout" do
+	session[:message] = ""
+	redirect "/home"
 end
+
+

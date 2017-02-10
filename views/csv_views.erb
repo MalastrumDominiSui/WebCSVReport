@@ -1,32 +1,63 @@
-<%@accounts.each do |name, q_info|%>
-    <h1> <%=name%></h1>
-    <p>Total Balance: $ <%=q_info.pretty_tally%> </p>
-     <hr>
-     <table>
-    <tr>
-       <td>Category</td>
-       <td>Total Spent</td>
-       <td>Average Transaction</td>
-       </tr>
-    <%q_info.categories.each do |category, c_info|%>
-       <tr>
-       <td>  <%=category%> </td>
-       <td> <%=c_info.pretty_tally %> </td>
-       <td> <%=c_info.pretty_avg_transaction%> </td>
-       </tr>
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="utf-8">
+
+
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+
+<body>
+
+<form class="login" action = "/account" method = "post">
+  <label>Admin Login: </label>
+  <input type="text" name="login">
+
+  <label>Password: </label>
+  <input type="text" name="password">
+
+  <input type= "submit"=>
+</form> 
+
+<span class="top_tab Sonia">
+  <a class="top_tab top_text" href="/account?name=Sonia" class="account_link">Sonia</a>
+</span>
+<span class="top_tab Priya">
+  <a class="top_tab top_text" href="/account?name=Priya" class="account_link">Priya</a>
+</span>
+<span class="top_tab All_Accounts">
+  <a class="top_tab top_text" href="/account?name=both priya and sonia" class="account_link">View All</a>
+</span>
+
+  <div class="folder" id="folder_sonia">
+    <% if @accounts != nil  %>  
+      <%@accounts.each do |name, q_info|%>
+          <h1> <%=name%></h1>
+          <p>Total Balance: $ <%=q_info.pretty_tally%> </p>
+          <hr>
+          <table>
+            <tr>
+                <td>Category</td>
+                <td>Total Spent</td>
+                <td>Average Transaction</td>
+              </tr>
+            <%q_info.categories.each do |category, c_info|%>
+                <tr>
+                  <td>  <%=category%> </td>
+                  <td> <%=c_info.pretty_tally %> </td>
+                  <td> <%=c_info.pretty_avg_transaction%> </td>
+                </tr>
+            <%end%>
+          </table>
+
+
+      <%end%>
+
     <%end%>
-   </table>
-
-  <%if name == "Priya" %>
-      <p><a href="/account?name=both">Combination</a></p>
-      <p><a href="/account?name=Sonia">Sonia </a></p>
-      <p><a href="http://localhost:4567/home">Home</a></p>
-  <%elsif name == "Sonia" %>
-      <p><a href="/account?name=both">Combination</a></p>
-      <p><a href="/account?name=Priya">Priya </a></p>
-      <p><a href="http://localhost:4567/home">Home</a></p>
-  
-  <%end %>
+  </div>
 
 
-<%end%>
+</body>
+
+</html>
